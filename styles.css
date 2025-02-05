@@ -1,0 +1,65 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+    font-weight: normal;
+  }
+  body{
+    padding:0;
+    margin:0;
+    background:linear-gradient(to right, #CDC1FF, #f9c1ff);
+  }
+  
+  .calculatorGrid {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      min-height: 100vh;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: 120px repeat(5, 100px); 
+      align-content: center;
+      background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .displayBox {
+      grid-column: span 4; /* Make display stretch across all 4 columns */
+      width: 100%;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding: 10px;
+      font-size: 2rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-bottom: 2px solid white
+      grid-column: 1/-1;
+      word-wrap: break-word;
+      word-breaks: break-all;
+  }
+  
+  
+  .calculatorGrid > button {
+      width: 100px;   /* Ensures buttons are 100px wide */
+      height: 100px;  /* Ensures buttons are 100px tall */
+      font-size: 2rem;
+      border: 1px solid white;
+      cursor: pointer;
+  }
+  
+  .displayBox .previousOperand{
+    color:rgb(0,0,0,0.5);
+    font-size: 1.5rem;
+  }
+  
+  .displayBox .currentOperand{
+    color:rgb(0,0,0);
+    font-size: 2.5rem;
+  }
+  
+  .calculatorGrid > button:hover{
+    background-color: white;
+  }
+  
+  .spanTwo{
+    grid-column: span 2;
+  }
